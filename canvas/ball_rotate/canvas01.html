@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas小球</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			text-align: center;
+		}
+		.controller{
+			width: 800px;
+			height:30px;
+			margin:20px auto 0;
+			display: -webkit-box;
+		}
+		.choose-bar {
+			-webkit-box-flex:1;
+			height: 20px;
+		}
+		.canvas{
+			margin-top:20px;
+			width: 800px;
+			height: 600px;
+			border:1px solid #000;
+		}
+	</style>
+	<script>
+		function rnd(m,n){
+			return Math.floor(m + Math.random()*(n-m));
+		}
+
+		window.onload = function(){
+
+			//获取canvas对象
+			var oC = document.querySelector('#canvas1');
+
+			//设定画布大小
+			oC.width = 800;
+			oC.height = 600;
+			
+			//获取上下文环境
+			var ctx = oC.getContext('2d');
+
+
+			//创建基础圆对象
+			var baseCir = {
+				x:oC.width/2,
+				y:oC.height/2,
+				r:200
+			};
+
+			//需要计算内切矩形的位置，让moveBall在内切矩形的内部初始化。
+			//内切正方形，应该是以圆心为中心向各方向45度角，取出起始点（左上角的点即可）
+			// console.log(Math.PI/180*45);
+			// console.log(Math.cos(Math.PI/180*45)*200);
+			// var startY = 100 + 200 - parseInt(Math.cos(Math.PI/180*45)*200);
+			// var startX = 200 + 200 - parseInt(Math.cos(Math.PI/180*45)*200);
+			// var recSize = parseInt(Math.cos(Math.PI/180*45)*200) * 2;
+			
+			//创建内切正方形对象
+			var innerRect = {
+				minX:200 + 200 - parseInt(Math.cos(Math.PI/180*45)*200),
+				minY:100 + 200 - parseInt(Math.cos(Math.PI/180*45)*200),
+				width:parseInt(Math.cos(Math.PI/180*45)*200) * 2,
+				height:parseInt(Math.cos(Math.PI/180*45)*200) * 2,
+			};
+			innerRect.maxX = innerRect.minX + innerRect.width;
+			innerRect.maxY = innerRect.minY + innerRect.height;
+
+			//创建随机小球对象（范围限制在内切方形内）
+			var tempBallRadius = parseInt(document.querySelector('#radius').value);
+			function MoveBall(){
+				this.x = rnd(innerRect.minX+tempBallRadius,innerRect.maxX-tempBallRadius);
+				this.y = rnd(innerRect.minY+tempBallRadius,innerRect.maxY-tempBallRadius);
+				this.r = tempBallRadius;
+				this.speedX = 2;
+				this.speedY = 2;
+				this.init();
+			}
+			MoveBall.prototype.init = function(){
+				var _this = this;
+				//运动之前先画出来一遍
+				this.draw();
+				this.move();
+			};
+			MoveBall.prototype.draw = function(){
+				//画基础圆
+				ctx.beginPath();
+				ctx.arc(baseCir.x,baseCir.y,baseCir.r,0,Math.PI*2,false);
+				ctx.strokeStyle = 'black';
+				ctx.stroke();
+				ctx.closePath();
+				//画内切方形
+				ctx.beginPath();
+				ctx.strokeStyle = 'green';
+				ctx.strokeRect(innerRect.minX,innerRect.minY,innerRect.width,innerRect.height);
+				ctx.closePath();
+				//画小球
+				ctx.beginPath();
+				ctx.arc(this.x,this.y,this.r,0,Math.PI*2,false);
+				ctx.fillStyle = 'red';
+				ctx.fill();
+				ctx.closePath();
+			};
+			MoveBall.prototype.move = function(){
+				var _this = this;
+				var cw = oC.width;
+				var ch = oC.height;
+				clearInterval(this.timer);
+				this.timer = setInterval(function(){
+					ctx.clearRect(0,0,cw,ch);
+					//关键
+					if(_this.x >= innerRect.maxX - _this.r || _this.x <= innerRect.minX + _this.r){
+						_this.speedX *= -1;
+					}
+					if(_this.y >= innerRect.maxY - _this.r || _this.y <= innerRect.minY + _this.r){
+						_this.speedY *= -1;
+					}
+					_this.x += _this.speedX;
+					_this.y += _this.speedY;
+					_this.draw();
+				},5);
+			};
+			var moveBall = new MoveBall();
+		};
+	</script>
+</head>
+<body>
+	<div id="contorl01" class="controller">
+		<div class="choose-bar choose-color">
+			<input type="color">
+		</div>
+		<div class="choose-bar choose-r">
+			<input id="radius" type="text" value="10">
+		</div>
+		<div class="choose-bar choose-dir">
+			<a href="javascript:void(0);">顺时针</a>
+			<a href="javascript:void(0);">逆时针</a>
+		</div>
+	</div>
+	<canvas id="canvas1" class="canvas"></canvas>
+</body>
+</html>

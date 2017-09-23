@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Canvas Randomness</title>
+</head>
+<body>
+ <section id="content">
+ <canvas style="border:1px solid #000;" height='400' id='canvas' width='600'></canvas>
+ <br />
+ <button onClick="motion()" class="scribble" ><b>方块运动</b></button>
+ </section>
+ <script type='text/javascript'>
+
+ var icount = 0; 
+ var myInterval;
+
+  var iCountHeight=2;
+  var iCountWidth=2;
+  var x=0;
+  var y=0;
+ function motion() {
+  canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+  ctx = canvas.getContext('2d');
+	//x=0;
+		//y=0;
+	clearInterval(myInterval);
+	ctx.globalAlpha = 1;
+	ctx.clearRect (0, 0,  canvas.width, canvas.height);
+	myInterval = setInterval(makemotion,10);
+	}
+  }
+
+  function makemotion(){
+   var cw = canvas.width;
+   var ch = canvas.height;
+   ctx.clearRect (0, 0,  cw, ch)
+   icount+=1
+   if (iCountHeight+y+20>ch || iCountHeight+y<0 ){iCountHeight =- iCountHeight}
+   if (iCountWidth+x+20>cw || iCountWidth+x<0){iCountWidth =- iCountWidth}
+   ctx.fillStyle = "#000";
+   x += iCountWidth;
+   y += iCountHeight;
+   ctx.fillRect(x,y, 20, 20);
+  }
+
+ </script>
+</body>
+</html>
