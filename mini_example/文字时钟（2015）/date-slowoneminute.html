@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>date</title>
+		<style type="text/css">
+			.show{width: 500px;height: 100px;font-size:36px;line-height:100px;border: 1px solid green;text-align:center;margin: 50px auto 0;}
+		</style>
+		<script type="text/javascript">
+			//页面加载
+			window.onload = function(){
+			/*
+				//获取显示时间的节点
+				var show = document.getElementById("show");
+				//声明定时器变量
+				var timer = ""
+				//判断分钟和秒数是否小于10
+				function ifLessThanTen(number){
+					if(number<10){
+						number = "0"+number;
+						return number;
+					}else{
+						return number;
+					}
+				}
+				//显示时间的函数 showTime
+				function showTime(){
+					clearInterval(timer);
+					timer = setInterval(function(){
+						//获取 年、月、日、时、分、秒
+						var date = new Date();
+						var year = date.getFullYear();
+						var month = date.getMonth()+1;
+						var dayOfMonth = date.getDate();
+						var hour = date.getHours();
+						var minute = date.getMinutes();
+						minute = ifLessThanTen(minute);
+						var second = date.getSeconds();
+						second = ifLessThanTen(second);
+						//定义显示时间的字符串
+						var timeStr = year+"年"+month+"月"+dayOfMonth+"日 "+hour+":"+minute+":"+second;
+						//让id为show的节点显示时间
+						show.innerHTML = timeStr;
+					},1000)
+				}
+				//调用函数
+				showTime();	
+			*/
+
+			
+
+				//判断分钟和秒数是否小于10的函数 ifLessThanTen(number)
+				function ifLessThanTen(number){
+					return number<10 ? "0"+number : number;
+				}
+
+				//显示时间的函数 showTime(dom) (格式：2015年6月20日 14:43:46)
+				function showTime(dom){
+					//获取 年、月、日、时、分、秒
+					var date = new Date();
+					var year = date.getFullYear();
+					var month = date.getMonth()+1;
+					var dayOfMonth = date.getDate();
+					var hour = date.getHours();
+					var second = date.getSeconds();
+					var minute = ifLessThanTen(date.getMinutes());
+					second = ifLessThanTen(second);
+					//定义显示时间的字符串
+					var timeStr = year+"年"+month+"月"+dayOfMonth+"日 "+hour+":"+minute+":"+second; 
+					dom.innerHTML = timeStr;
+				}
+
+				//注意点：setInterval 和 setTimeout 的参数中的函数如果使用句柄引用就不能带参数，这里我的showTime需要参数
+				//所以我们就构造一个返回值为无参函数的函数用来达到我们的真实目的
+				function showTimeByInterval(dom){
+					return function(){
+						showTime(dom);
+					}
+				}
+
+				//定时执行指定操作的函数 intervalDo(fun,second)
+				function intervalDo(fun,second){
+					clearInterval(timer);
+					var timer = setInterval(fun,second);
+				}
+
+				//获取显示时间的节点
+				var show = document.getElementById("show");
+				showTime(show);
+				intervalDo(showTimeByInterval(show),1000);
+
+			}//window.onload结束
+
+		</script>
+	</head>
+	<body>
+		<div id="show" class="show">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+
+*{margin: 0;padding:0;}
+
+body{
+	background-color: #eee;
+}
+h3{
+	text-align:center;
+	margin: 20px auto 0;
+}
+.main{
+	width: 960px;
+	height: 480px;
+	margin: 10px auto 0;
+	position: relative;
+	border: 1px solid green;
+}
+.change{
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	position: absolute;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	-o-transition:0.5s;
+	transition:0.5s;
+	z-index:1;
+}
+.change:hover{
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);
+	z-index:2;
+}
+.img1{
+	left: 75px;
+	top:88px;
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+}
+.img2{
+	left:123px;
+	top:250px;
+	-webkit-transform:rotate(-35deg);
+	-moz-transform:rotate(-35deg);
+	-o-transform:rotate(-35deg);
+	transform:rotate(-35deg);
+}
+.img3{
+	left:380px;
+	top:265px;
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+}
+.img4{
+	left:700px;
+	top:250px;
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+}
+.img5{
+	left:600px;
+	top:200px;
+	-webkit-transform:rotate(-20deg);
+	-moz-transform:rotate(-20deg);
+	-o-transform:rotate(-20deg);
+	transform:rotate(-20deg);
+}
+.img6{
+	left:490px;
+	top:150px;
+	-webkit-transform:rotate(25deg);
+	-moz-transform:rotate(25deg);
+	-o-transform:rotate(25deg);
+	transform:rotate(25deg);
+}
+.img7{
+	left:280px;
+	top:250px;
+	-webkit-transform:rotate(-30deg);
+	-moz-transform:rotate(-30deg);
+	-o-transform:rotate(-30deg);
+	transform:rotate(-30deg);
+}
+.img8{
+	left:361px;
+	top:52px;
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+}
+.img9{
+	left:650px;
+	top:65px;
+	-webkit-transform:rotate(-15deg);
+	-moz-transform:rotate(-15deg);
+	-o-transform:rotate(-15deg);
+	transform:rotate(-15deg);
+}
+.img10{
+	left:255px;
+	top:86px;
+	-webkit-transform:rotate(-27deg);
+	-moz-transform:rotate(-27deg);
+	-o-transform:rotate(-27deg);
+	transform:rotate(-27deg);
+}

@@ -1,0 +1,26 @@
+/*初始化*/
+*{margin:0; padding:0;}
+a{text-decoration:none; color: #3c3c3c;}
+a:hover{color: #f40;}
+ul,li{list-style:none;}
+body{font-size: 12px;}
+/*公用*/
+.fl{float:left;}
+.fr{float:right;}
+
+.show{display: block;}
+.hide{display: none;}
+
+/*主体部分*/
+.main{width:298px;height:100px;border:1px solid #e8e8e8;margin:100px auto 0;position: relative;overflow: hidden;}
+
+.nav{width: 301px; height: 27px;line-height: 27px; position: absolute;left: -1px;}
+.nav li.nav_li{float:left;width: 58px;background-color: #f7f7f7;text-align:center;padding: 0 1px;
+	border-bottom: 1px solid #e8e8e8;}
+.nav li.nav_li_on,.nav li.nav_li:hover{background-color: #fff;border-bottom: 0 none;padding: 0;
+	border-left: 1px solid #e8e8e8;border-right: 1px solid #e8e8e8; font-weight: 700;}
+
+.content{height: 70px;margin-top: 28px;}
+.content ul.con{padding:12px 0;}
+.content ul.con li{width: 49%;float: left;line-height: 24px;text-align: center;}
+.content ul.con a.con_a_on{color: #f40;}
