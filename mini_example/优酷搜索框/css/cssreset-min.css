@@ -1,0 +1,53 @@
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+/* 设置网页字体颜色：黑色 背景颜色：白色 */
+html{color:#000;background:#FFF}
+
+/* 主题、盒子、定义列表（dt中的项目，dd描述项目的）、无序列表、有序列表、列表具体列、标题1到6、原格式呈现pre、源代码、表单、
+表单元素分组、fieldset的标题、输入框、文本域、段落标记、长引用、表头单元格、单元格 的内边距 外边距 设置为0 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,
+fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+/* 表格 忽略边框间距 并将边框间距设置为0 */
+table{border-collapse:collapse;border-spacing:0}
+
+/* 将表单的元素分组功能 和 图片标签 边框设置为0 */
+fieldset,img{border:0}
+
+/* 联系信息 表格标题 参考文献 源代码 特殊术语 强调 加粗 表头单元格 变量 字体样式正常 字体粗度正常*/
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+
+/* 将有序列表和无序列表的 列表样式设置为无 */
+ol,ul{list-style:none}
+
+/* 表格标题 表头单元格 设置为左对齐 */
+caption,th{text-align:left}
+
+/* 标题标签 设置为字体大小100% 字体粗度为正常 */
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+
+/* 在短引用标签的前后加入空格 */
+q:before,q:after{content:''}
+
+/* 缩写标签 首字母缩写标签 边框为0 小型大写字体属性 设置为标准 */
+abbr,acronym{border:0;font-variant:normal}
+
+/* 上标文本垂直对齐 顶对齐 */
+sup{vertical-align:text-top}
+
+/* 下标文本垂直对齐 底对齐 */
+sub{vertical-align:text-bottom}
+
+/* 输入、文本域、下拉框 设置为：字体、 字体大小、 字体粗度继承父类 在IE浏览器下字体大小为100% */
+/* 在css样式名之前加一个“ * ”号的作用是使该样式名只对IE浏览器有作用 */
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+
+/* legend 元素为 fieldset 元素定义标题（caption）颜色设置为黑色 */
+legend{color:#000}
+
+#yui3-css-stamp.cssreset{display:none}

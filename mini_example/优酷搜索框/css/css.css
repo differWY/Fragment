@@ -1,0 +1,23 @@
+/*------reset------*/
+input,select,button,textarea{border: none;outline: none;}
+
+
+
+.searchBox{width: 540px;height: 40px; margin: 10px auto;position: relative;}
+.searchBar{width: 448px;height: 36px;
+	border-left: 2px solid #a0a0a0;border-top: 2px solid #a0a0a0;border-bottom: 2px solid #a0a0a0;}
+.searchBar input{width: 402px;height: 14px;float: left;font-size: 14px; padding: 11px 0 11px 10px;color: #555;}
+a#ranking{display:inline-block; width: 36px;height: 36px;float: right;}
+/*问题：雪碧图小图标之间距离太近怎么办？ 解决在a内嵌入一个正好和icon大小相等的i标签，使用i标签的margin与background-position结合调整位置*/
+a#ranking i{display: inline-block;width: 18px;height: 18px;margin: 10px;background: url(../images/rank.png) -1px -183px no-repeat;}
+/*问题：缺少取色工具 和量取像素工具*  解决：安装火狐浏览器和firework */
+
+.searchShow{width: 448px;height: auto;overflow: hidden;position: absolute;top: 40px;left: 0px;border: 2px solid #a0a0a0;margin-top: -2px;}
+.searchShow li{height: 30px; margin: 0 4px 0 4px; font-size: 14px;color: #666;background-color: #fff;line-height: 30px;}
+.searchBtn a{display: inline-block; width: 90px;height: 40px;background: url(../images/header.png) 0px -160px no-repeat;}
+
+
+
+/*------public------*/
+.fl{float: left;}
+.fr{float: right;}

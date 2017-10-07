@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+</head>
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	.scrollBar{width: 890px;height: 281px;position: relative;margin: 100px auto;}
+	.scroll{width: 800px;height: 281px; margin: 0 auto;  position:relative;overflow: hidden;}
+	.scroll ul{position: absolute;left: 0px;top: 0px;overflow: hidden;}
+	.scroll ul li{width: 200px;height: 281px;float: left;list-style: none;}
+
+	.turnLeft,.turnRight{background-image: url(images/ComBg.png);background-repeat: no-repeat;
+		display: inline-block;width: 42px;height: 42px;position: absolute;top: 130px;}
+	.turnLeft{background-position: -272px 0px;left: -3px;}
+	.turnRight{background-position: -313px 0px;right: -3px;}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var oScroll = document.getElementById("scroll");
+		var oUL = oScroll.getElementsByTagName("ul")[0];
+		var aLi = oUL.getElementsByTagName("li");
+
+
+		var oScrollBar = document.getElementById("scrollBar");
+
+		function getByClass(oParent,className){
+			var arr = [];
+			var aClass = oParent.getElementsByTagName("*");
+			for(var i=0;i<aClass.length;i++){
+				if(aClass[i].className == className){
+					arr.push(aClass[i]);
+				}
+			}
+			return arr;		
+		}
+		
+		var aTurnLeftBtn = getByClass(oScrollBar,"turnLeft");
+		var aTurnRightBtn = getByClass(oScrollBar,"turnRight");
+
+
+		//复制一份内容作视觉差假象，就指滑动出去部分的填补（替补）
+		oUL.innerHTML = oUL.innerHTML + oUL.innerHTML;
+
+		//ul的宽度 （单个li宽度 * li数组的长度）
+		oUL.style.width = aLi[0].offsetWidth * aLi.length + "px";	
+
+		
+		//无缝滑动函数 move(speed,lmete,rmete)
+		//obj:控制哪一个对象进行滑动（滑动体）
+		//speed:（滑动速度） num 正数向右滑动 负数向左
+		//lmete: （左边界） 向左滑动时临界值，到达临界值需要根据需求进行操作 (为负值)
+		//rmete：（右边界）同上 （为正值）
+
+		function move(obj,speed,lmete,rmete){
+			//声明定时器
+			var timer = null;
+			// if(speed>0){
+			// 	obj.style.left = rmete + "px"
+			// }else{
+			// 	obj.style.left = lmete + "px";
+			// }
+			/* 
+			问题：初想是通过speed大于小于0来判断，给定初始状态值，结果发现不能放到定时器里
+				  后来发现不需要这样判断，当obj的offsetLeft大于右边界rmete的时候就说明它是以一个
+				  不断大于左边界lmete（向右）的趋势滑动，这时speed自然大于零，反之亦然。
+			*/
+			function ifLAndR(){
+				obj.style.left = obj.offsetLeft + speed +"px";
+				if(obj.offsetLeft > rmete){
+					obj.style.left = lmete + "px"
+				}
+				if(obj.offsetLeft < lmete){
+					obj.style.left = rmete + "px"
+				}
+			}
+
+			/*鼠标悬停滚动停止*/
+			timer = setInterval(ifLAndR,30);
+			oScroll.onmouseover = function(){
+				clearInterval(timer);
+			}
+			oScroll.onmouseout = function() {
+				timer = setInterval(ifLAndR,30);
+			}
+
+			/*左右箭头控制左右滚动*/
+			aTurnLeftBtn[0].onclick = function(){
+				speed>0?speed=-speed:speed=speed;
+			}	
+			aTurnRightBtn[0].onclick = function(){
+				speed>0?speed=speed:speed=-speed;
+			}
+		}
+
+		move(oUL,-2,-800,0);
+
+
+	}
+</script>
+<body>
+	<div id="scrollBar" class="scrollBar">
+		<a href="javascript:;"  class="turnLeft"></a>
+		<div id="scroll" class="scroll">
+			<ul>
+				<li><img src="images/1.png" alt=""></li>
+				<li><img src="images/2.png" alt=""></li>
+				<li><img src="images/3.png" alt=""></li>
+				<li><img src="images/4.png" alt=""></li>
+			</ul>
+		</div>
+		<a href="javascript:;" class="turnRight"></a>
+	</div>
+</body>
+</html>
