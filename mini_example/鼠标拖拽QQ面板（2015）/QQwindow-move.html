@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">-->
+		<title>QQ登陆窗口移动效果</title>
+		<link rel="stylesheet" href="css/QQwindow-move.css">
+		<!--<script type="text/javascript" src="js/QQwindow-move.js"></script>-->
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				overflow: hidden;
+			}
+			.qq_login_window{
+				position: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="qq_login_window" class="qq_login_window">
+			<div class="move" id="move"></div>
+			<div class="topBgArea">
+				<div id="close" class="close"></div>
+			</div><!-- .topBgArea -->
+			<div class="contentArea">
+				<div class="mainArea">
+					<div class="left fl">
+						<img class="logoImg" src="images/logo.jpg" alt="logo" width="80px" height="80px">
+						<img id="stateIcon"  src="images/onlineicon_03.png" alt="online" width="13px" height="13px">
+					</div><!-- .left -->
+					<div class="middle fl">
+						<div class="inputArea">
+							<input id="username" class="username" type="text" name="username" placeholder="账户">
+							<input id="password" class="password" type="password" name="password" placeholder="密码">
+						</div>
+						<div class="chooseArea">
+							<div class="rebPass fl">
+								<input id="rebPass" type="checkbox" name="rebPass">
+								记住密码
+							</div>
+							<div class="autoLogin fr">
+								<input id="autoLogin" type="checkbox" name="autoLogin">
+								自动登录
+							</div>
+						</div>
+						<div class="loginBtn">
+							<input id="loginBtn" type="submit" name="login" value="登   录">
+						</div>
+					</div><!-- .middle -->
+					<div class="right fl">
+						<a href="#" title="">注册账号</a>
+						<a href="#" title="">找回密码</a>
+					</div><!-- .right -->
+				</div><!-- .mainArea -->
+			</div><!-- .contentArea -->	
+		</div><!-- .qq_login_window -->
+		<script type="text/javascript" src="js/move.js"></script>
+	</body>
+</html>

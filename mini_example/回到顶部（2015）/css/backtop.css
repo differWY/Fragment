@@ -1,0 +1,18 @@
+*{margin: 0}
+
+.main{
+	width:1190px;
+	margin:0 auto;
+}
+#back_top_btn{
+	width: 40px;
+	height: 40px;
+	background: url(../images/tb_backtopbtn.png) no-repeat left top;
+	position: fixed;
+	right: 130px;
+	bottom: 30px;
+	display: none;/*默认隐藏*/
+}
+#back_top_btn:hover{
+	background: url(../images/tb_backtopbtn.png) no-repeat left -40px;
+}

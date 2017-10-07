@@ -1,0 +1,155 @@
+
+
+*{
+	margin: 0; padding: 0;
+}
+body{
+	font-size: 12px;
+}
+a{
+	text-decoration: none;
+}
+
+
+.fh_lhb{
+	width: 360px;
+	margin: 0 auto;
+	margin-top: 100px;
+	position: relative;
+}
+.fh_lhb ul#lhb_nav{
+	width: 360px;
+	height: 22px;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+.fh_lhb ul#lhb_nav a{
+	display: block;
+	float: left;
+	width: 40px;
+	height: 24px;
+	/* border-right: 1px solid #dedede; */
+	text-align: center;
+	line-height: 24px;
+	/* margin-top: 5px;
+	margin-bottom: 5px; */
+	color: #333;
+}
+/* .fh_lhb ul.lhb_nav a.last_nav{
+	width: 39px;
+	border: none;
+} */
+
+/*备用的focus类 current*/
+.fh_lhb ul#lhb_nav a.current{
+	color: #fff;
+	background: #3a7b9a;
+	margin-top: -1px;
+}
+.fh_lhb ul#lhb_nav a:hover{
+	color: #fff;
+	background: #3a7b9a;
+	margin-top: -1px;
+}
+
+
+
+#lhb_body{
+	width: 360px;
+	height: 220px;
+	margin-top: 6px;
+}
+#lhb_body li.change{
+	display: block;
+	width: 360px;
+	height: 220px;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+#lhb_body li.change p.half_transparent{
+	width: 360px;
+	height: 30px;
+	background: #000;
+	opacity: 0.6;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+ #lhb_body li.change a{
+ 	display: block;
+	width: 360px;
+	height: 220px;
+	line-height: 410px;
+	text-indent: 10px;
+	font-size: 14px;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/*border: 1px green solid;*/
+} 
+/*.lhb_body li.change a:hover{
+	text-decoration: underline;
+	这样的布局定义underline不可行，因为a大小和li大小一样
+}*/
+#lhb_body li#p1{
+	background: url(../images/lhb/1.jpg);
+}
+#lhb_body li#p2{
+	background: url(../images/lhb/2.jpg);
+}
+#lhb_body li#p3{
+	background: url(../images/lhb/3.jpg);
+}
+#lhb_body li#p4{
+	background: url(../images/lhb/4.jpg);
+}
+#lhb_body li#p5{
+	background: url(../images/lhb/5.jpg);
+}
+#lhb_body li#p6{
+	background: url(../images/lhb/6.jpg);
+}
+#lhb_body li#p7{
+	background: url(../images/lhb/7.jpg);
+}
+#lhb_body li#p8{
+	background: url(../images/lhb/8.jpg);
+}
+#lhb_body li#p9{
+	background: url(../images/lhb/9.jpg);
+}
+
+.fh_lhb b{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	cursor: pointer;
+}
+.fh_lhb #to_left_c{
+	top: 50%;
+	left: 10px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+}
+.fh_lhb #to_left_c:hover{
+	background-color: rgba(0,0,0,0.6);
+}
+.fh_lhb #to_right_c{
+	top: 50%;
+	right: 10px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+}
+.fh_lhb #to_right_c:hover{
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+

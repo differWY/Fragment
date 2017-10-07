@@ -1,0 +1,254 @@
+/*公用样式start*/
+
+/*ie9以下浏览器兼容设置*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+.comWidth{width: 1000px;margin: 0 auto; }
+
+.fl{float: left;}
+.fr{float: right;}
+
+a{color: #333; text-decoration: none;}
+a:hover{color: #ff9500;}
+/*新闻导航条样式 公共部分*/
+.pbNav{height: 38px;border-bottom:1px solid #b9b9b9;background-color: #f7f8fc; }
+.pbNav li{font:16px/42px "Microsoft Yahei"; color:#5B6475; text-align: center;height: 36px; float: left;
+	cursor: pointer;list-style: none;/*transition:border-bottom 0.5s , color 0.5s;*/}
+/*.pbNav li:hover{border-bottom: 3px solid #ce5b0b;color:#ce5b0b;}*/
+.pbNav li.navli_current{border-bottom: 3px solid #ce5b0b;color:#ce5b0b;}
+.pbNav a{font:18px/38px "Microsoft Yahei";color:#cc5a0d;font-weight: 700;display: inline-block;float: right;margin-right: 12px;}
+/*公用样式end*/
+
+/* ------------------------------------------头部header start------------------------------------------- */
+/* 头部导航nav start*/
+nav{height: 30px;background-color: #676e7e;}
+.navBar{height: 30px;line-height: 30px;font-size: 12px;}
+.navBar a:hover{color: #ff9500;}
+.leftArea{width: 50%;height: 30px;}
+.leftArea a{display: inline-block;float: left;}
+.leftArea a.date{display: inline-block;color: #ececee;padding-left: 20px;}
+.leftArea a.date:hover{color: #ff9500;}
+.rightArea{width: 390px;height:30px;}
+.rightArea li{height:20px;float: left;padding: 0 10px;border-left: 1px solid #838987;line-height: 20px;margin-top: 5px;}
+.rightArea a{color: #fff;}
+/* end 头部导航nav */
+/* logo搜索 start*/
+.search{height: 90px;background-color: #f7f8fc;border-bottom: 1px solid #eeedf2;}
+.search_left{width: 295px;padding: 27px 0; }
+a.baidu_logo{display: inline-block;width: 117px;height: 37px;
+	background: url(../images/logo_sprite_2014.png) no-repeat -1px -66px;margin-left: 146px;}
+.search_middle{padding: 12px 0 14px;width: 502px;}
+.baidu_nav{margin-left: 5px;margin-bottom: 5px;}
+.baidu_nav li{float: left;font-size: 14px;padding: 0 10px;font-family: "Microsoft Yahei";}
+.baidu_nav a{color: #5b6475;}
+.baidu_nav a:hover{color: #ff9500;}
+.baidu_nav .current{/*备用的百度导航当前样式*/font-weight: 700;}
+.search_body{width: 500px;height: 36px;border: 1px solid #ce5a0f;background-color: #fff;}
+input.search_text{display: inline-block;float: left;width: 415px;height: 36px;text-indent: 10px;
+	/*padding-left: 10px; 捆绑父级宽度 ，坑爹*/}
+a.search_select{display: inline-block;float: left;width: 33px;height: 36px;
+	background: url(../images/icon_sprite_2014.png) no-repeat -44px -163px;}
+.search_btn_bg{width: 52px;height: 36px;float: left;background-color: #ce5a0d;}
+input.search_btn{width: 52px;height: 36px;
+	background: url(../images/icon_sprite_2014.png) no-repeat -112px -194px;cursor: pointer;}
+.search_right{width: 160px;height: 42px;color: #777779;font-size: 12px;margin: 36px 16px 0px;}
+.search_right a{color: #777779;}
+.search_right a:hover,.search_right span:hover{cursor: pointer;color: #ff9500; }
+.xh_jx{margin-bottom: 5px;}
+.xh_jx,.email_lg{width: 160px;height: 18px;float: left;}
+.xh_jx i,.email_lg i{display: inline-block;float: left;width: 18px;height: 18px;margin-right: 2px;}
+.xh_jx i{background: url(../images/icon_sprite_2014.png) no-repeat -110px -173px;}
+.email_lg i{background: url(../images/icon_sprite_2014.png) no-repeat -140px -173px;}
+/* end logo搜索 */
+/* tp_pd 图片广告 start */
+.tp_pd{padding: 10px 0; }
+.tp_pd img{width: 494px;border: 1px solid #ededef;}
+/* end tp_pd 图片广告 */
+/* ----------------------------------end 头部header---------------------------------------- */
+
+
+/* ---------------------------------混合排版信息 start----------------------------------- */
+/* 链接 和 频道 start */
+/* 链接 */
+.link_and_channel{height:253px;font-family: "Microsoft Yahei";font-size: 14px;margin-bottom:10px;}
+.link_group{width: 732px; height: 251; border: 1px solid #cb5a0a; float: left;}
+.link_top,.link_bottom{padding: 8px 0;height: auto;overflow: hidden;}
+.middle_line{ width: 716px; height:2px; border-bottom: dashed 1px #d6d6d6; margin: 0 auto;}
+.link_top li,.link_bottom li{width: 103px;height: 30px;float: left; line-height: 30px; text-align: center;}
+/*频道*/
+.channel{width: 250px;height: 253px; float: right;}
+.channel_push{height: 40px;background-color: #f7f8fc;line-height: 40px; font-size: 12px;margin-bottom: 1px;}
+.channel_push span{background: url(../images/icon_sprite_2014.png) no-repeat -207px top; margin: 10px 0 0 10px;
+	display: inline-block; width: 65px; height: 20px; line-height: 20px;text-indent: 27px; color: #646174;}
+.channel_nav{height: 212px; overflow: hidden;}
+.channel_nav li{width: 124px;background-color: #f7f8fc; float: left;margin: 0 1px 1px 0; padding: 10px 0;}
+.channel_nav li a{display: inline-block; height: 20px;width: 100%;line-height: 20px; font-size: 12px;color: #5e6470;}
+.channel_nav li a:hover{color: #ff9500;}
+a.cha_nav_text{text-align: center;}
+.channel_nav li a.iconA{height: 30px;font-size: 14px;text-align: left;line-height: 30px;}
+a.iconA i{display: block; width: 26px; height: 30px; float: left; margin: 0 20px;}
+a.cha_nav_new i{background: url(../images/icon_sprite_2014.png) no-repeat 0 0; margin-top: 2px;}
+a.cha_nav_video i{background: url(../images/icon_sprite_2014.png) no-repeat -30px 0;margin-top: 2px;}
+a.cha_nav_book i{background: url(../images/icon_sprite_2014.png) no-repeat -62px 0;}
+a.cha_nav_shop i{background: url(../images/icon_sprite_2014.png) no-repeat 0px -284px;}
+a.cha_nav_tri i{background: url(../images/icon_sprite_2014.png) no-repeat -161px 0;}
+a.cha_nav_goods i{background: url(../images/201503060921000.png) no-repeat -3px -3px;}
+/* end 链接 和 频道 */
+
+/* 混合新闻 start */ 
+.mixed_news{height: 775px;}
+
+/* 混合新闻left */
+.mixedleft{width:734px; height: 775px; float: left;}
+/*新闻链接换一换*/
+.newA_change{height: 30px;text-align: center;line-height: 14px;}
+.newA_change ul{height: 30px;margin-left: 42px; float: left;}
+.newA_change a{display: inline-block; float: left; color:#5b6475;font-size: 12px;margin: 0 8px;}
+.newA_change a:hover{color:#ff9500; text-decoration: underline;}
+.newA_change span#change{display: inline-block; float: left; margin-left: 20px; color:#ff9500; font-size: 12px;cursor: pointer;}
+/*新闻的外框和导航*/
+.mixed_text{height: 745px; }
+.mixed_text nav.pbNav li{width: 10%;}
+/*新闻部分的公用样式 分为top middle bottom */
+.mixed_text .top{width: 100%; height: 393px;}
+.top_left{width: 340px; height: 393px;text-align: center;}
+.top_left a.text{display: inline-block;height: 30px;width: 100%;font-size: 14px; line-height: 30px ; color: #333;}
+.top_left a.text:hover{color: #ff9500;}
+.top_left .top_left_t{width: 340px; height: 232px; float: left;padding-top: 15px; margin-bottom: 12px;}
+.top_left .top_left_b{width: 340px; height: 143px;float: left;}
+.top_left .top_left_b li.xt1{width: 154px;height: 116px;float: left;}
+.top_left .top_left_b li.xt1 a,.top_left .top_left_b li.xt2 a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.top_left .top_left_b li.xt2{width: 154px;height: 116px;float: right;}
+/*右边的新闻列表*/
+.top_right{width: 363px;height: 360px;;padding: 15px 0 18px 30px;}
+.top_right ul{width: 363px;height: 180px; float: left; margin-bottom: 10px;}
+.top_right ul li{width: 360px; height: 14px; line-height: 14px; float: left;margin-bottom: 16px;}/*这里的宽度有争议*/
+.top_right ul li a{font-size: 14px;}
+a.importentNews{font-weight: 700;}/*重点新闻加粗的备用样式*/
+/*中间的图文混合块*/
+.mixed_text .middle{height: 86px;}
+.middle_left{margin-right: 30px;}
+.middle_left,.middle_right{width: 340px; height: 86px;background-color: #f7f8fc; float: left;}
+.middle_news_img{width: 154px;height: 86px;float: left;}
+.middle_news_text{width: 166px;height: 86px;float: left;padding: 0 10px;}
+.middle_news_text a.importentNews{display: inline-block;width: 180px; font-size: 14px;line-height: 30px;
+	white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}/*这里偷懒的直接用了层级的importentNews 注意一下*/
+.middle_news_text p{width: 170px;height: 50px;}
+.middle_news_text p a{display: inline-block;width: 170px;height: 40px; font-size: 12px;line-height: 22px;color: #777779;
+	overflow:hidden;text-overflow:ellipsis;}
+.middle_news_text p a:hover{color: #ff9500;}
+/*底部的列表新闻块*/
+.mixed_text .bottom{height: 227px;}
+.bottom_left{margin-right: 30px;}
+.bottom ul{width: 340px;height: 221px;float: left;padding-top: 6px;}
+.bottom ul li.without_line{border: none;}
+.bottom ul li{width: 340px; height: 62px; border-bottom:1px dashed #dcdcdc;padding-top: 7px;}
+.bottom ul li a{font-size: 14px;line-height: 30px;}
+.bottom ul li p{white-space: nowrap;overflow: hidden;text-overflow:ellipsis;color: #777779;}
+.bottom ul li p a{font-size: 12px;line-height: 22px;color: #777779;}
+.bottom ul li p a:hover{color: #ff9500;}
+/* end 新闻部分的公用样式 分为top middle bottom */
+/* end 混合新闻left */
+
+/* 混合新闻right */
+.mixedRight{width: 250px; height: 775px; float:right;}
+/*书籍列表上边的广告位 用图片占位了 可以放置框架*/
+.mixedRight .pd{height: 250px; margin-bottom:10px;}
+/* 书籍列表 */
+.book_charts{height: 515px;}
+.book_title{height: 38px; background-color: #f7f8fc; border-bottom:1px solid #bababc;}
+.book_title p{width: 86px; height: 36px; font:16px/48px "Microsoft Yahei"; color: #ce5a0d; float: left;
+	border-bottom:3px solid #cf5c0b; text-indent:12px;}
+.book_list{width: 250px;height: 313px;padding-top: 17px;}
+.book_list li{width: 220px; height: 30px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;}
+.book_list li a{color: #333;font-size: 14px;}
+.book_list li a:hover{color: #ff9500;}
+.book_list li span{display: inline-block; width: 14px; height: 14px; font-size: 10px; color: #fff; 
+	  background-color: #616a79; text-align: center;margin-right: 5px;}
+.book_list li .top3{background-color: #ce5a0d;}
+/* 书籍列表下边的图片推广 */
+.book_push_img{width: 250px;height: 145px;}
+.book_push_img a{width: 122px; height: 116px; text-align: center;float: left;}
+.book_push_img a img{width: 116px;height: 88px; margin: 2px;}
+/* end 混合新闻right */
+
+/* end 混合新闻 */ 
+
+/* --------------------------------- end 混合排版信息 ----------------------------------- */
+
+
+/* ---------------------------- 图书、视频、旅行、购物 轮换布局 底部模块 start -------------------------------------- */
+.img_video_tri_shop{ height:auto; overflow:hidden;}
+/*图像和视频的公用样式*/
+.photo,.video{height: 247px;}
+.photo nav li,.video nav li{width: 64px;}
+.photoAndVideo_switch{height: 208px;}
+.photoAndVideo_switch ul{height: 200px;margin-top: 12px;}
+.photoAndVideo_switch ul li{width: 178px;height: 190px; float: left;margin-right: 27px;}
+.photoAndVideo_switch ul li.photoAndVideo_first_li{margin:0 27px 0 1px;}
+.photoAndVideo_switch ul li.photoAndVideo_last_li{margin:0 1px 0 0;}
+.photoAndVideo_switch ul p a{font-size: 12px;}
+/*旅行*/
+.travel{height: 433px;}
+.specialPrice_today{height: 393px;}
+.hotel_imgAndText{width: 589px;height: 393px;}
+.hotel_imgAndText ul{height: 368px;margin-top: 10px;}
+.hotel_imgAndText ul li{width: 178px;height: 184px; float: left;margin-right: 27px; position: relative;}
+.hotel_imgAndText ul li i{display: inline-block;width: 172px; height: 16px; background-color: rgba(0,0,0,0.5); color: #ff9500;
+	text-align: right; position:absolute;left: 0px;top: 112px;padding-right: 6px;line-height: 16px;}
+.hotel_imgAndText ul li.hotel_imgAndText_left{margin:0 27px 0 1px;}
+.hotel_imgAndText ul li.hotel_imgAndText_right{margin:0;}
+.hotel_imgAndText ul p a{font-size: 12px;}
+.hotel_list{width: 349px;height: 366px;padding: 10px 12px 18px 50px;}
+.hotel_list div.line{height: 0px;border-bottom: 1px dashed #d4d4d4;}
+.hotel_list ul{width: 349px;height: 160px;font-size: 12px;padding: 10px 0;}
+.hotel_list ul li {height: 32px;line-height: 32px;}
+.hotel_list ul li span{display: inline-block;width: 280px;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;
+	float: left;}
+.hotel_list ul li i{display: inline-block; float: right; width: 69px;text-align: right;color: #ff9500;}
+/*旅游和购物的公共导航li长度*/
+.travel nav li,.shop nav li{width: 96px;}
+/*购物*/
+.shop{height: 397px;}
+.tmail_hotShop{height: 292px;}
+.tmail_hotShop p{width: 100%; height: 27px;background-color: rgba(255,255,255,0.7);position: absolute;left: 0;bottom: 0;
+	font-size: 12px;line-height: 27px;text-align: center;}
+.tmail_hotShop p:hover{background-color: rgba(205,82,2,0.6);}
+.tmail_hotShop p a{color: #333;}
+.tmail_hotShop .big_img{width: 192px; height: 282px;margin-top: 10px;position: relative;}
+.tmail_hotShop .small_img_list ul{width: 808px;height: 291px;}
+.tmail_hotShop .small_img_list ul li{float: left;width: 192px;height: 136px;margin: 10px 0 0 10px;position: relative;}
+.shop_bottom_links{height: 20px; margin: 16px 0 30px 0;text-align: center;font-size: 14px;
+	line-height: 20px;}
+.shop_bottom_links a{display: inline-block; width: auto; color: #8a8787; margin:0 3px;}
+.shop_bottom_links a:hover{text-decoration:underline;}
+
+/*底部的分类导航模块*/
+.bottom_module{height: 80px;width: 998px;border: 1px solid #e5e5e5;padding: 19px 0;margin-bottom: 10px;}
+.bottom_module ul{height: 80px;}
+.bottom_module ul li{width: 163px; height: 80px ;margin-left:35px; float: left;position: relative;
+	border-right: 1px solid #e5e5e5;}
+.bottom_module ul .moz_mobile{border: none;}
+.bottom_module ul li a.module_logo{display: inline-block;width:38px;height:38px;position: absolute; left :0;top: 12px;}
+.moz_community a.module_logo{background: url(../images/icon_sprite_2014.png) no-repeat 0 -32px;}
+.moz_Extended a.module_logo{background: url(../images/icon_sprite_2014.png) no-repeat -37px -29px;}
+.article_push a.module_logo{background: url(../images/icon_sprite_2014.png) no-repeat -153px -29px;}
+.recent_active a.module_logo{background: url(../images/icon_sprite_2014.png) no-repeat -73px -29px;}
+.moz_mobile a.module_logo{background: url(../images/7_20141114143123.png) no-repeat 8px 0px;}
+.btm_text{width: 80px;height: 64px;position: absolute;left: 64px;top: 10px;}
+.btm_text p a{font-size: 14px;line-height: 25px;color: #5b6475;font-weight: 700;}
+.btm_text p a:hover{color: #ff9500;}
+.btm_text div.desc a{font-size: 12px;line-height: 20px; float: left;}
+/* ---------------------------- end 图书、视频、旅行、购物 轮换布局 底部模块-------------------------------------- */
+
+footer{height: 153px;background-color: #676e7e;}
+footer .comWidth{height: 153px; position: relative;}
+footer .comWidth .firefor_download{display: inline-block; width: 150px;height: 55px; position: absolute;left: 0px;top: 10px;
+	background:url(../images/logo_sprite_2014.png) no-repeat -128px 0px;}
+footer .comWidth p{font-size: 12px;text-align: center;color: #fff;}
+footer .comWidth p a{color: #fff;}
+footer .comWidth p a:hover{color: #ff9500;}
+footer .comWidth p.link{height: 56px;line-height: 56px;}
+/*font-family:Arial, Helvetica, sans-serif;版权符号显示正常的字体*/
+footer .comWidth p.copyRight,footer .comWidth p.icp{height: 25px;line-height: 25px;font-family:Arial, tahoma,宋体;}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js速度移动测试</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.box{width:200px;height:200px;background-color:#f90;position:relative;left:-200px;top:300px;}
+		.share{width:20px;height:40px;border-radius: 0 5px 5px 0; background-color: #f20;position: absolute;right:-20px;top: 40px;color: #fff;font-size: 12px; text-align: center;line-height: 20px;cursor:pointer;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oShare = document.getElementById('share');
+			oShare.onclick = function(){
+				toggleSlide(10,-200,0);
+			}
+			//声明定时器
+			var timer = "";
+			function toggleSlide(speed,lTarget,rTarget){
+				var oBox = document.getElementById('box');
+
+				if(oBox.offsetLeft < rTarget){
+					clearInterval(timer);
+					timer = setInterval(function(){
+						oBox.style.left = oBox.offsetLeft + speed + 'px';
+						if(oBox.offsetLeft == rTarget){
+							clearInterval(timer);
+						}
+					},30);
+				}
+				
+				if(oBox.offsetLeft >= rTarget){
+					clearInterval(timer);
+					timer = setInterval(function(){
+						oBox.style.left = oBox.offsetLeft - speed + 'px';
+						if(oBox.offsetLeft == lTarget){
+							clearInterval(timer);
+						}	
+					},30);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	
+	<div id="box" class="box">
+		<div id="share" class="share">
+			分享
+		</div>
+	</div>
+</body>
+</html>

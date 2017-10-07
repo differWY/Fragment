@@ -1,0 +1,13 @@
+第一种解决方案（推荐）
+IE6以及更低版本的浏览器对“：hover”的支持不理想，对于类似的“p:hover”、“img:hover”、“#header:hover”...,今天给大家介绍一种新的方法，可以完美解决IE6不支持hover的情况，用法很简单，将下载后的“csshover.htc”文件，定义在body样式内。
+body{behavior:url("csshover.htc");}
+
+第二种解决方案
+<style type=”text/css”>  
+     p:hover,p.hover { background:#eee; }   /* 就是要多写一个.hover而已 */
+</style> 
+下面这段代码要放到页面的底部在</body> 前：
+
+<script type=”text/javascript”> //<!– 让所有标记支持hover function $(){ if(document.all){ // 判断是否IE浏览器 var obj=document.all; for(var i=0;i<obj.length;i++){ obj[i].onmouseover=function(){ this.className=”hover” } ; obj[i].onmouseout=function(){ this.className=”" } } } } $(); //–> </script>
+
+虽然现在ie6已经不是那么重要了，但是在天朝，我们有时还是要兼容IE6的！
